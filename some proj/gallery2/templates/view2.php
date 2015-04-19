@@ -1,5 +1,5 @@
-<h2>Галлеря фото:</h2>
-<p><a href="index.php?id=1">Обычный вид </a>| Табличный вид</p>
+<h2>Р“Р°Р»Р»РµСЂСЏ С„РѕС‚Рѕ:</h2>
+<p><a href="index.php?id=1">РћР±С‹С‡РЅС‹Р№ РІРёРґ </a>| РўР°Р±Р»РёС‡РЅС‹Р№ РІРёРґ</p>
 
 <?php $nn = "hidden"; if (mysql_num_rows(mysql_query("SELECT * FROM gallery ORDER BY id_gal DESC"))>0) $nn="visible";?>
 <div>

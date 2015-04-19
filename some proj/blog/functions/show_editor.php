@@ -9,23 +9,23 @@ $cou = mysql_num_rows($q);
 
 <? while ($row = mysql_fetch_array($q) ):?>
 <div style="width:700px ; word-wrap:break-word;">
-<p><b>Номер новости:</b>  <?=$row['id_article'];?></p>
-<p><b>Дата:</b> <?=$row['time'];?></p>
-<p><b>Имя:</b> <?=$row['name'];?></p>
+<p><b>РќРѕРјРµСЂ РЅРѕРІРѕСЃС‚Рё:</b>  <?=$row['id_article'];?></p>
+<p><b>Р”Р°С‚Р°:</b> <?=$row['time'];?></p>
+<p><b>РРјСЏ:</b> <?=$row['name'];?></p>
 
-<p><b>Заголовок:</b> <?=substr($row['title'],0,50);?></p>
-<p><b>Текст:</b> <?=substr($row['content'],0,200);?>
-<b></p><p><a class="a2" href="editor.php?id=<?=$cid;?>&news=<?=$row['id_article'];?>" >Отредактировать</a></b></p>
+<p><b>Р—Р°РіРѕР»РѕРІРѕРє:</b> <?=substr($row['title'],0,50);?></p>
+<p><b>РўРµРєСЃС‚:</b> <?=substr($row['content'],0,200);?>
+<b></p><p><a class="a2" href="editor.php?id=<?=$cid;?>&news=<?=$row['id_article'];?>" >РћС‚СЂРµРґР°РєС‚РёСЂРѕРІР°С‚СЊ</a></b></p>
 </div>
 <hr>
 <? endwhile; ?>
 
 <?if ($cid >1):?>
-<a class="a2" href="editor.php?id=<?=($cid-1);?>"> Предыдущие новости</a>
+<a class="a2" href="editor.php?id=<?=($cid-1);?>"> РџСЂРµРґС‹РґСѓС‰РёРµ РЅРѕРІРѕСЃС‚Рё</a>
 <?else:?>
-Предыдущие новости 
+РџСЂРµРґС‹РґСѓС‰РёРµ РЅРѕРІРѕСЃС‚Рё 
 <? endif; ?>
 <?if ($cou >4):?>
-<a class="a2" href="editor.php?id=<?=($cid+1);?>"> Следующие новости</a>
+<a class="a2" href="editor.php?id=<?=($cid+1);?>"> РЎР»РµРґСѓСЋС‰РёРµ РЅРѕРІРѕСЃС‚Рё</a>
 <? endif; ?>
 

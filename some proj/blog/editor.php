@@ -8,7 +8,7 @@ if (!empty($_POST)){
 header("location:editor.php?id=" .$_GET[id] ."&news=". $_GET[news] ."&idd=ok");
 }
 
-echo view_page ("templates/header.php",array(title=>'Ðåäàêòîð',cpage=>'editor'));
+echo view_page ("templates/header.php",array(title=>'Ð ÐµÐ´Ð°ÐºÑ‚Ð¾Ñ€',cpage=>'editor'));
 echo view_page ("templates/v_editor.php");
 
 //echo $i_header;

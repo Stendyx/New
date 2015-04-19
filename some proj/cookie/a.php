@@ -21,8 +21,8 @@ exit();
 
 ?>
 
-<p> Здравствуйте <?php echo $username; ?></p> 
-<p>Нажата ли кнопка - <? echo $_COOKIE["username"]; ?> </p>
+<p> Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ <?php echo $username; ?></p> 
+<p>РќР°Р¶Р°С‚Р° Р»Рё РєРЅРѕРїРєР° - <? echo $_COOKIE["username"]; ?> </p>
 <p>SECRET VIDEO</p>
 <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-<p><a href="index.php">Выход</a></p>
+<p><a href="index.php">Р’С‹С…РѕРґ</a></p>

@@ -44,16 +44,16 @@ exit();
 
 <form action="" method="post">
 <div align="center" style="padding:150px;">
-<h2> Приветствуем вас на нашем закрытом сайте ! </h2>
-<p><b> Вход только по секретным паролям ! </b></p>
+<h2> РџСЂРёРІРµС‚СЃС‚РІСѓРµРј РІР°СЃ РЅР° РЅР°С€РµРј Р·Р°РєСЂС‹С‚РѕРј СЃР°Р№С‚Рµ ! </h2>
+<p><b> Р’С…РѕРґ С‚РѕР»СЊРєРѕ РїРѕ СЃРµРєСЂРµС‚РЅС‹Рј РїР°СЂРѕР»СЏРј ! </b></p>
 
-<input type="text" placeholder="Ваше имя" name="username"/>
+<input type="text" placeholder="Р’Р°С€Рµ РёРјСЏ" name="username"/>
 </br>
-<input type="text" placeholder="Пароль" name="pass"/>
+<input type="text" placeholder="РџР°СЂРѕР»СЊ" name="pass"/>
 </br></br>
-<input type="checkbox" name="remember"/>Запомнить меня
+<input type="checkbox" name="remember"/>Р—Р°РїРѕРјРЅРёС‚СЊ РјРµРЅСЏ
 </br></br>
-<input type="submit" value="Отправить"/>
+<input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"/>
 </div>
 
 </form>

@@ -1,10 +1,10 @@
 <div style="float:left; padding:20px">
-<h3>Загрузка изображений в галлерею</h3>
+<h3>Р—Р°РіСЂСѓР·РєР° РёР·РѕР±СЂР°Р¶РµРЅРёР№ РІ РіР°Р»Р»РµСЂРµСЋ</h3>
 
 <form method="post" action="" enctype="multipart/form-data" >
 <input type="file" name="pict"></br>
-<input type="submit" name="ok" value="Загрузить" />
-<input type="submit" name="del" value="Удалить галерею"/>
+<input type="submit" name="ok" value="Р—Р°РіСЂСѓР·РёС‚СЊ" />
+<input type="submit" name="del" value="РЈРґР°Р»РёС‚СЊ РіР°Р»РµСЂРµСЋ"/>
 </form></br></div>
 <div style="float:left;padding:10px;max-width:820px">
 <?php include_once("$link");?>

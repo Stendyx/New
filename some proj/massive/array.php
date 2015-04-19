@@ -33,7 +33,7 @@ foreach ($in as $in2)
 $sum +=$in2;
 
 }
-echo "Сумма всех ячеек таблицы : " .$sum . "</br>";
+echo "РЎСѓРјРјР° РІСЃРµС… СЏС‡РµРµРє С‚Р°Р±Р»РёС†С‹ : " .$sum . "</br>";
 
 foreach ($arr as $inc){
 echo implode(",", $inc) . "</br>";

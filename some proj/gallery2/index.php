@@ -28,7 +28,7 @@ $dfile = $_FILES["pict"];
 $del = $_POST["del"];
 $picname = trim($dfile['name']);
 if ($picname=="" || !preg_match("/(\w+\.jpg)|(\w+\.jpeg)|(\w+\.png)/",$picname))
-echo "Ошибка загрузки , проверьте, что формат файла - картинка ";
+echo "РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё , РїСЂРѕРІРµСЂСЊС‚Рµ, С‡С‚Рѕ С„РѕСЂРјР°С‚ С„Р°Р№Р»Р° - РєР°СЂС‚РёРЅРєР° ";
 else{
 upload_file($picname,$dfile);
 get_url($picname);

@@ -10,14 +10,14 @@ $newtext=$_POST[edittext];
 
 if (!empty($_GET[idd]))
 {
-echo "Новость успешно сохранена!";
+echo "РќРѕРІРѕСЃС‚СЊ СѓСЃРїРµС€РЅРѕ СЃРѕС…СЂР°РЅРµРЅР°!";
 
 }
 
 if (!empty($_POST[ok]))
 {
 mysql_query("UPDATE articles SET title='$newart',content='$newtext' WHERE id_article=". $_GET[news] . "");
-//echo "Новость успешно отредактирована!";
+//echo "РќРѕРІРѕСЃС‚СЊ СѓСЃРїРµС€РЅРѕ РѕС‚СЂРµРґР°РєС‚РёСЂРѕРІР°РЅР°!";
 //header("location:..editor.php?id=" .$_GET[id] ."&news=". $_GET[news] ."&idd=ok");
 }
 
@@ -26,15 +26,15 @@ mysql_query("UPDATE articles SET title='$newart',content='$newtext' WHERE id_art
 
 ?>
 
-<h3><a class="a2" href="editor.php?id=<?=$_GET[id];?>">Назад </a></h3>
+<h3><a class="a2" href="editor.php?id=<?=$_GET[id];?>">РќР°Р·Р°Рґ </a></h3>
 
 <div style="width:900px ; word-wrap:break-word;">
 
 
 <form method="post" action="" >
-Заголовок:</br><textarea type="text" name="editarticle" cols="80" rows="2"  ><?=$lasttitle;?></textarea></br></br>
-Текст новости:</br><textarea name="edittext"  cols="100" rows="20" ><?=$lasttext;?></textarea></br>
-<input type="submit" name="ok" value="Сохранить изменения" />
+Р—Р°РіРѕР»РѕРІРѕРє:</br><textarea type="text" name="editarticle" cols="80" rows="2"  ><?=$lasttitle;?></textarea></br></br>
+РўРµРєСЃС‚ РЅРѕРІРѕСЃС‚Рё:</br><textarea name="edittext"  cols="100" rows="20" ><?=$lasttext;?></textarea></br>
+<input type="submit" name="ok" value="РЎРѕС…СЂР°РЅРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ" />
 
 
 </form>

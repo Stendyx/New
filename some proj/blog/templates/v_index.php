@@ -1,19 +1,19 @@
 
 <?
 if (!empty($_GET[news])):?>
-<h3><a class="a2" href="index.php?id=<?=$_GET[id];?>">Назад </a></h3>
+<h3><a class="a2" href="index.php?id=<?=$_GET[id];?>">РќР°Р·Р°Рґ </a></h3>
 <div style="width:900px ; word-wrap:break-word;">
 <? $q = mysql_query("SELECT * FROM articles WHERE id_article=". $_GET[news] . "");  $row = mysql_fetch_array($q); ?>
-<p><b>Номер новости:</b>  <?=$row['id_article'];?></p>
-<p><b>Дата:</b> <?=$row['time'];?></p>
-<p><b>Имя:</b> <?=$row['name'];?></p>
+<p><b>РќРѕРјРµСЂ РЅРѕРІРѕСЃС‚Рё:</b>  <?=$row['id_article'];?></p>
+<p><b>Р”Р°С‚Р°:</b> <?=$row['time'];?></p>
+<p><b>РРјСЏ:</b> <?=$row['name'];?></p>
 
-<p><b>Заголовок:</b> <?=$row['title'];?></p></br>
-<p><b>Текст:</b> <?=$row['content'];?></div>
+<p><b>Р—Р°РіРѕР»РѕРІРѕРє:</b> <?=$row['title'];?></p></br>
+<p><b>РўРµРєСЃС‚:</b> <?=$row['content'];?></div>
 
 
 <?else:
-echo "<h2>Новости:</h2></br>";
+echo "<h2>РќРѕРІРѕСЃС‚Рё:</h2></br>";
  include ("/functions/show_news.php");
   endif; ?>
 

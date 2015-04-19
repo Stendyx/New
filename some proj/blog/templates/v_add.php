@@ -2,11 +2,11 @@
 
 <div>
 <form action="" method="post">
-<input type="text" placeholder="Âàøå èìÿ" name="username" value="<?=$usname;?>" /></br>
-<input type="text" placeholder="Çàãîëîâîê íîâîñòè" name="usertitle" value="<?=$ustitle;?>" /></br>
-<textarea placeholder="Òåêñò ñîîáùåíèÿ" rows="10" cols="100" name="usertext" ><?=$ustext;?></textarea></br>
-<input type="submit" value="Îïóáëèêîâàòü" name="ok"/>
-<input type="submit" value="Î÷èñòèòü" name="del"/>
+<input type="text" placeholder="Ð’Ð°ÑˆÐµ Ð¸Ð¼Ñ" name="username" value="<?=$usname;?>" /></br>
+<input type="text" placeholder="Ð—Ð°Ð³Ð¾Ð»Ð¾Ð²Ð¾Ðº Ð½Ð¾Ð²Ð¾ÑÑ‚Ð¸" name="usertitle" value="<?=$ustitle;?>" /></br>
+<textarea placeholder="Ð¢ÐµÐºÑÑ‚ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ" rows="10" cols="100" name="usertext" ><?=$ustext;?></textarea></br>
+<input type="submit" value="ÐžÐ¿ÑƒÐ±Ð»Ð¸ÐºÐ¾Ð²Ð°Ñ‚ÑŒ" name="ok"/>
+<input type="submit" value="ÐžÑ‡Ð¸ÑÑ‚Ð¸Ñ‚ÑŒ" name="del"/>
 </form>
 </div>
 
@@ -15,12 +15,12 @@
 
 
 <?else :
-echo "Íîâîñòü äîáàâëåíà!";
+echo "ÐÐ¾Ð²Ð¾ÑÑ‚ÑŒ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð°!";
 endif;?><?
 
 
 
-if (check($_POST['username'],$_POST['usertitle'],$_POST['usertext'])===2) {echo "Âñå ïîëÿ îáÿçàòåëüíû ê çàïîëíåíèþ!";}
+if (check($_POST['username'],$_POST['usertitle'],$_POST['usertext'])===2) {echo "Ð’ÑÐµ Ð¿Ð¾Ð»Ñ Ð¾Ð±ÑÐ·Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹ Ðº Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸ÑŽ!";}
 
 ?>
 

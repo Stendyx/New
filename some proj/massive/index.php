@@ -1,11 +1,11 @@
 <form action="array.php" method="post">
 
-<p>Введите кол-во строк и столбцов:</p>
-<input type="text" maxlength="2" placeholder="Кол-во строк" name="rows"/>
+<p>Р’РІРµРґРёС‚Рµ РєРѕР»-РІРѕ СЃС‚СЂРѕРє Рё СЃС‚РѕР»Р±С†РѕРІ:</p>
+<input type="text" maxlength="2" placeholder="РљРѕР»-РІРѕ СЃС‚СЂРѕРє" name="rows"/>
 <br>
-<input type="text" maxlength="2" placeholder="Кол-во столбцов" name="cols" />
+<input type="text" maxlength="2" placeholder="РљРѕР»-РІРѕ СЃС‚РѕР»Р±С†РѕРІ" name="cols" />
 <br>
-<input type="submit" name="ok" value="Выполнить" />
+<input type="submit" name="ok" value="Р’С‹РїРѕР»РЅРёС‚СЊ" />
 
 
 

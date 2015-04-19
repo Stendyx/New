@@ -1,0 +1,1 @@
+<?php?><p>Ссылки на страницы:</p><br><br><a href="b.php" > Другой сайт</a><br><a href="index.php" > Главная</a>

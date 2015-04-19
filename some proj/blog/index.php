@@ -5,7 +5,7 @@ include ('functions/dbconnect.php');
 include ('functions/model.php');
 
 
-echo view_page ("templates/header.php",array(title=>'Ãëàâíàÿ ñòðàíèöà',cpage=>'index'));
+echo view_page ("templates/header.php",array(title=>'Ð“Ð»Ð°Ð²Ð½Ð°Ñ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ð°',cpage=>'index'));
 echo view_page ("templates/v_index.php");
 
 

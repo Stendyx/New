@@ -26,11 +26,11 @@ else messages();
 
 function show_form(){
 echo '<form method="post" action="" >' ;
-echo '<input type="text" name="username" maxlength="32" placeholder="Ваше имя" /></br>' ;
-echo '<textarea name="usertext" maxlength="255" rows="5" cols="40"  placeholder="Ваше сообщение" ></textarea>' ;
+echo '<input type="text" name="username" maxlength="32" placeholder="Р’Р°С€Рµ РёРјСЏ" /></br>' ;
+echo '<textarea name="usertext" maxlength="255" rows="5" cols="40"  placeholder="Р’Р°С€Рµ СЃРѕРѕР±С‰РµРЅРёРµ" ></textarea>' ;
 echo '</br>' ;
 echo '<input type="submit"/></br></form>' ;
-echo '<form action="" method="post"><input type="submit" name="del" value="Удалить все сообщения" /></form>' ;
+echo '<form action="" method="post"><input type="submit" name="del" value="РЈРґР°Р»РёС‚СЊ РІСЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ" /></form>' ;
 }
 function write (){
 $datee= date("H:i:s d-m-Y");
@@ -49,8 +49,8 @@ $q = mysql_query("SELECT * FROM messages ORDER BY dataa DESC") or die (mysql_err
 for ($i=0;$i<mysql_num_rows($q);$i++)
 {
 $f = mysql_fetch_array($q);
-echo "<p> $f[dataa] </p><p>Ваше имя: $f[name]</p>";
-echo "<p>Комментарий:</p><p>$f[msg]</p></br></br>";
+echo "<p> $f[dataa] </p><p>Р’Р°С€Рµ РёРјСЏ: $f[name]</p>";
+echo "<p>РљРѕРјРјРµРЅС‚Р°СЂРёР№:</p><p>$f[msg]</p></br></br>";
 }
 }
 ?>

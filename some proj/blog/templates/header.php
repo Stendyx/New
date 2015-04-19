@@ -15,23 +15,23 @@ a.a2:visited
 <body>
 <div style="background-color:black;border:2px dashed grey; height:80px; width:1000px;">
 <h3><? if ($cpage=="index"):?>
-Главная страница 
+Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р° 
  <?else:?>
- <a href="index.php">Главная страница</a> 
+ <a href="index.php">Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a> 
  <? endif;?>
  
 ||  
 <? if ($cpage=="editor"):?>
-Редактор новостей
+Р РµРґР°РєС‚РѕСЂ РЅРѕРІРѕСЃС‚РµР№
  <?else:?>
-<a href="editor.php">Редактор новостей</a></h3>
+<a href="editor.php">Р РµРґР°РєС‚РѕСЂ РЅРѕРІРѕСЃС‚РµР№</a></h3>
  <? endif;?>
 
 <h4 align="center"> 
 <? if ($cpage=="add"):?>
-Добавить новость
+Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕСЃС‚СЊ
  <?else:?>
-<a href="add.php">Добавить новость</a></h4>
+<a href="add.php">Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІРѕСЃС‚СЊ</a></h4>
  <? endif;?>
 
 

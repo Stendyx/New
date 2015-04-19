@@ -6,13 +6,13 @@ $qid =$_GET["qid"];
 <h3><? 
 
 if ($_SERVER["HTTP_REFERER"]=="http://stendyx/7/gallery2/index.php?id=2")
-{echo "<a href=\"../index.php?id=2\">Назад</a>";}
+{echo "<a href=\"../index.php?id=2\">РќР°Р·Р°Рґ</a>";}
 else
-{echo "<a href=\"../index.php\">Назад</a>";}
+{echo "<a href=\"../index.php\">РќР°Р·Р°Рґ</a>";}
 ?>
 
 </h3></br>
-<h3>Фотография номер <?=$qid?></h3>
+<h3>Р¤РѕС‚РѕРіСЂР°С„РёСЏ РЅРѕРјРµСЂ <?=$qid?></h3>
 </br>
 
 <? 
