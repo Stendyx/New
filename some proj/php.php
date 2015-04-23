@@ -12,59 +12,59 @@ mysql_connect (DB_SERVER,DB_LOGIN,DB_PASSWORD)or die (mysql_error());
 mysql_select_db(DB_NAME) or die (mysql_error());
 mysql_query ('SET NAMES cp1251');}
 
-РАБОТА С БД{
+Р РђР‘РћРўРђ РЎ Р‘Р”{
 
-mysql_query($string);{ // $string - запросы: 
-"SELECT * FROM messages ORDER BY dataa DESC" // выбрать все сообщения отсортированные по дате
-"UPDATE table_name SET name="max",last_name="yg" WHERE year="2014" AND .. //Изменяет имя и фамилию у строк где год 2014 ...
-"DELETE FROM tab_n WHERE id=4" // удаление
-"INSERT INTO messages (name,msg) VALUES ('$usname','$usmsg')" // ЗАПИСЬ В БД
+mysql_query($string);{ // $string - Р·Р°РїСЂРѕСЃС‹: 
+"SELECT * FROM messages ORDER BY dataa DESC" // РІС‹Р±СЂР°С‚СЊ РІСЃРµ СЃРѕРѕР±С‰РµРЅРёСЏ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Рµ РїРѕ РґР°С‚Рµ
+"UPDATE table_name SET name="max",last_name="yg" WHERE year="2014" AND .. //РР·РјРµРЅСЏРµС‚ РёРјСЏ Рё С„Р°РјРёР»РёСЋ Сѓ СЃС‚СЂРѕРє РіРґРµ РіРѕРґ 2014 ...
+"DELETE FROM tab_n WHERE id=4" // СѓРґР°Р»РµРЅРёРµ
+"INSERT INTO messages (name,msg) VALUES ('$usname','$usmsg')" // Р—РђРџРРЎР¬ Р’ Р‘Р”
 }
 
-mysql_error()  // пишет ошибку. норм в совокупе с OR DIE 
-mysql_num_rows($q) // где $q - это селект , аналог count
-mysql_fetch_array($q) // где $q - это селект , аналог array[список] понимает и ключи [0],[1],[2] и ассоц массив [key],[key2]...
-примеры{ 
-: while ($row=mysql_fetch_array($q)) {echo $row[$col]} где $col - это столбец (ид, имена и тд )
-или : for ($i=0;$i <mysql_num_rows($q)) $i++) {$row=mysql_fetch_array($q); echo $row[$col]; }}
+mysql_error()  // РїРёС€РµС‚ РѕС€РёР±РєСѓ. РЅРѕСЂРј РІ СЃРѕРІРѕРєСѓРїРµ СЃ OR DIE 
+mysql_num_rows($q) // РіРґРµ $q - СЌС‚Рѕ СЃРµР»РµРєС‚ , Р°РЅР°Р»РѕРі count
+mysql_fetch_array($q) // РіРґРµ $q - СЌС‚Рѕ СЃРµР»РµРєС‚ , Р°РЅР°Р»РѕРі array[СЃРїРёСЃРѕРє] РїРѕРЅРёРјР°РµС‚ Рё РєР»СЋС‡Рё [0],[1],[2] Рё Р°СЃСЃРѕС† РјР°СЃСЃРёРІ [key],[key2]...
+РїСЂРёРјРµСЂС‹{ 
+: while ($row=mysql_fetch_array($q)) {echo $row[$col]} РіРґРµ $col - СЌС‚Рѕ СЃС‚РѕР»Р±РµС† (РёРґ, РёРјРµРЅР° Рё С‚Рґ )
+РёР»Рё : for ($i=0;$i <mysql_num_rows($q)) $i++) {$row=mysql_fetch_array($q); echo $row[$col]; }}
 
 
 }
 
 
-ЗАЩИТНЫЕ ФУНКЦИИ{ 
-htmlspecialchars($text) экранирует все теги , 
-mysql_real_escape_string($text) - экранирует символы в строках 
-( для чисел достаточно поставить (int)($name) 
+Р—РђР©РРўРќР«Р• Р¤РЈРќРљР¦РР{ 
+htmlspecialchars($text) СЌРєСЂР°РЅРёСЂСѓРµС‚ РІСЃРµ С‚РµРіРё , 
+mysql_real_escape_string($text) - СЌРєСЂР°РЅРёСЂСѓРµС‚ СЃРёРјРІРѕР»С‹ РІ СЃС‚СЂРѕРєР°С… 
+( РґР»СЏ С‡РёСЃРµР» РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕСЃС‚Р°РІРёС‚СЊ (int)($name) 
 
-sprintf для упрощения можно насильно заставлять писать либо цифры либо строки{
+sprintf РґР»СЏ СѓРїСЂРѕС‰РµРЅРёСЏ РјРѕР¶РЅРѕ РЅР°СЃРёР»СЊРЅРѕ Р·Р°СЃС‚Р°РІР»СЏС‚СЊ РїРёСЃР°С‚СЊ Р»РёР±Рѕ С†РёС„СЂС‹ Р»РёР±Рѕ СЃС‚СЂРѕРєРё{
 $name = %s . %d;
 $sp = ($name ,mysql_real_escape_string($username),$year);
-ГДЕ $name - строка
-%s - строка . %d - число . %f - действ. число
+Р“Р”Р• $name - СЃС‚СЂРѕРєР°
+%s - СЃС‚СЂРѕРєР° . %d - С‡РёСЃР»Рѕ . %f - РґРµР№СЃС‚РІ. С‡РёСЃР»Рѕ
 }
 
-нельзя передавать файл по типу index.php?file=file.php include[$_GET[file] - надо закрывать либо в свиче либо ифы
-hiden поля мб видно в исходном коде
+РЅРµР»СЊР·СЏ РїРµСЂРµРґР°РІР°С‚СЊ С„Р°Р№Р» РїРѕ С‚РёРїСѓ index.php?file=file.php include[$_GET[file] - РЅР°РґРѕ Р·Р°РєСЂС‹РІР°С‚СЊ Р»РёР±Рѕ РІ СЃРІРёС‡Рµ Р»РёР±Рѕ РёС„С‹
+hiden РїРѕР»СЏ РјР± РІРёРґРЅРѕ РІ РёСЃС…РѕРґРЅРѕРј РєРѕРґРµ
 }
 
-Альтернативный синтаксис {
+РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ СЃРёРЅС‚Р°РєСЃРёСЃ {
 <?foreach ($articles as $article):?> <?endforeach?>
-<? if ($a == 5): ?>A равно 5<? else: ?><? endif; ?>
-Тернарный оператор
+<? if ($a == 5): ?>A СЂР°РІРЅРѕ 5<? else: ?><? endif; ?>
+РўРµСЂРЅР°СЂРЅС‹Р№ РѕРїРµСЂР°С‚РѕСЂ
 $page = (isset($_GET[page])) ? int($_GET[page]):1 );
 
 $var = condition ? exp1 : exp2; If condition is true - $var = exp1 ; else $var = exp2;
 }
 
-БУФЕР{
+Р‘РЈР¤Р•Р {
 ob_start();
 echo "123";
 $x=ob_get_clean();
 echo $x ."456";
 }
 
-ШАБЛОН
+РЁРђР‘Р›РћРќ
 {
 //view.php
 function view_page ($filename, $vars= array())
@@ -87,23 +87,23 @@ return ob_get_clean();
 include ("view.php");
 
 $content=view_page("v_index.php",
-array(username=>'username',title=>'Титл страницы'));
+array(username=>'username',title=>'РўРёС‚Р» СЃС‚СЂР°РЅРёС†С‹'));
 
 echo $content;}
 
-Редактор с тегами и норм версткой вместо TEXTAREA {
+Р РµРґР°РєС‚РѕСЂ СЃ С‚РµРіР°РјРё Рё РЅРѕСЂРј РІРµСЂСЃС‚РєРѕР№ РІРјРµСЃС‚Рѕ TEXTAREA {
 CKEditor & TinyMCE
-nl2br ($text) - заменяет ентеры на бры для норм верстки
+nl2br ($text) - Р·Р°РјРµРЅСЏРµС‚ РµРЅС‚РµСЂС‹ РЅР° Р±СЂС‹ РґР»СЏ РЅРѕСЂРј РІРµСЂСЃС‚РєРё
 }
 
 
-ООП
+РћРћРџ
 {
-Классы лучше всего называть как файлы - C_Edit - C_Edit.php
+РљР»Р°СЃСЃС‹ Р»СѓС‡С€Рµ РІСЃРµРіРѕ РЅР°Р·С‹РІР°С‚СЊ РєР°Рє С„Р°Р№Р»С‹ - C_Edit - C_Edit.php
 
-функция __autoload($classname { include_once("url/$classsname.php")}
+С„СѓРЅРєС†РёСЏ __autoload($classname { include_once("url/$classsname.php")}
 
-обычный {
+РѕР±С‹С‡РЅС‹Р№ {
 
 class Abc {
 var $id;
@@ -118,14 +118,14 @@ $s->id = 333;
 $s->view_id();
 }
 
-конструктор{
+РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ{
 
 
 class Abc {
 var $id;
 var $year;
 
-// можно __construct вместо повторения имени класса 
+// РјРѕР¶РЅРѕ __construct РІРјРµСЃС‚Рѕ РїРѕРІС‚РѕСЂРµРЅРёСЏ РёРјРµРЅРё РєР»Р°СЃСЃР° 
 function Abc($id,$year)
 {
 $this->id = $id;
@@ -145,13 +145,13 @@ $s->view();
 
 }
 
-наследование{
+РЅР°СЃР»РµРґРѕРІР°РЅРёРµ{
 
 class Abc {
 var $id;
 var $year;
 
-// можно __construct вместо повторения имени класса 
+// РјРѕР¶РЅРѕ __construct РІРјРµСЃС‚Рѕ РїРѕРІС‚РѕСЂРµРЅРёСЏ РёРјРµРЅРё РєР»Р°СЃСЃР° 
 function Abc($id,$year)
 {
 $this->id = $id;
@@ -184,27 +184,27 @@ echo $this->id . " abc " . $this->year .ctrftime(%d,%m,%y) , $this->ctime;
 
 }
 
-Виде переменных класса {
-public $a Виден всем
-private $a виден только себе
-protected $a виден себе и детям
+Р’РёРґРµ РїРµСЂРµРјРµРЅРЅС‹С… РєР»Р°СЃСЃР° {
+public $a Р’РёРґРµРЅ РІСЃРµРј
+private $a РІРёРґРµРЅ С‚РѕР»СЊРєРѕ СЃРµР±Рµ
+protected $a РІРёРґРµРЅ СЃРµР±Рµ Рё РґРµС‚СЏРј
 
-const COPYRIGHT ="www.ya.ru"; не меняется / обращаться через Abc::COPYRIGHT 
-внутри функции ссылка будет не на $this - (ссылка на объект)  а .self - ссылка на класс
-abstract - нельзя использовать при наследовании
-
-}
-
-функции {
-__construct ($a,$b... ) делать конструктор для класса
-__clone () {$this->id=$this->id +1 } клонирует класс , и увеличит ид на 1 чтоб не повторялось
+const COPYRIGHT ="www.ya.ru"; РЅРµ РјРµРЅСЏРµС‚СЃСЏ / РѕР±СЂР°С‰Р°С‚СЊСЃСЏ С‡РµСЂРµР· Abc::COPYRIGHT 
+РІРЅСѓС‚СЂРё С„СѓРЅРєС†РёРё СЃСЃС‹Р»РєР° Р±СѓРґРµС‚ РЅРµ РЅР° $this - (СЃСЃС‹Р»РєР° РЅР° РѕР±СЉРµРєС‚)  Р° .self - СЃСЃС‹Р»РєР° РЅР° РєР»Р°СЃСЃ
+abstract - РЅРµР»СЊР·СЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂРё РЅР°СЃР»РµРґРѕРІР°РЅРёРё
 
 }
 
-статичность{
+С„СѓРЅРєС†РёРё {
+__construct ($a,$b... ) РґРµР»Р°С‚СЊ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РґР»СЏ РєР»Р°СЃСЃР°
+__clone () {$this->id=$this->id +1 } РєР»РѕРЅРёСЂСѓРµС‚ РєР»Р°СЃСЃ , Рё СѓРІРµР»РёС‡РёС‚ РёРґ РЅР° 1 С‡С‚РѕР± РЅРµ РїРѕРІС‚РѕСЂСЏР»РѕСЃСЊ
+
+}
+
+СЃС‚Р°С‚РёС‡РЅРѕСЃС‚СЊ{
 
 class MathOp{
-// static - значит что этот метод принадлежит не экземпляру классу а самому класу
+// static - Р·РЅР°С‡РёС‚ С‡С‚Рѕ СЌС‚РѕС‚ РјРµС‚РѕРґ РїСЂРёРЅР°РґР»РµР¶РёС‚ РЅРµ СЌРєР·РµРјРїР»СЏСЂСѓ РєР»Р°СЃСЃСѓ Р° СЃР°РјРѕРјСѓ РєР»Р°СЃСѓ
 static public function sum ($x,$y){
 return $x+$y;
 }
@@ -216,16 +216,16 @@ echo MathOp::sum(3,2); echo MathOp::min(3,2);
 
 }
 
-интерфейс {
+РёРЅС‚РµСЂС„РµР№СЃ {
 
 interface IArticle {
 public function view ();
 public function set_title($title);
 public function get_title();
-// правило для интерфейса - т.е если есть этот интерфейс то должны быть эти 3 функции в ней
+// РїСЂР°РІРёР»Рѕ РґР»СЏ РёРЅС‚РµСЂС„РµР№СЃР° - С‚.Рµ РµСЃР»Рё РµСЃС‚СЊ СЌС‚РѕС‚ РёРЅС‚РµСЂС„РµР№СЃ С‚Рѕ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СЌС‚Рё 3 С„СѓРЅРєС†РёРё РІ РЅРµР№
 }
-class Article implements IArticle; // теперь если в классе Артикл не будет 3 функций этих то будет ругаться
-implements - должна быть
+class Article implements IArticle; // С‚РµРїРµСЂСЊ РµСЃР»Рё РІ РєР»Р°СЃСЃРµ РђСЂС‚РёРєР» РЅРµ Р±СѓРґРµС‚ 3 С„СѓРЅРєС†РёР№ СЌС‚РёС… С‚Рѕ Р±СѓРґРµС‚ СЂСѓРіР°С‚СЊСЃСЏ
+implements - РґРѕР»Р¶РЅР° Р±С‹С‚СЊ
 }
 jijjjjijiijihgkjhubu
 }
